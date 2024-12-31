@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://media.istockphoto.com/id/1053277490/photo/sustainable-community-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=QX7IK27SApurY9EzHu-TO0tBvqNiXTht5D98P7yJ4T0=);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: rgb(234, 237, 237);
+    padding: 10px 0;
+    text-align: center;
+    border-style:double;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px;
+    position: fixed;
+    width: 100vw;
+}
+
+header h1 {
+    color: black;
+    margin: 0;
+    font-size: 32px;
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: rgb(14, 189, 216);
+}
+
+/* Service Listings Container */
+.service-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    
+}
+
+/* Individual Service Boxes */
+.service-item {
+    width: 400px;
+    margin: 10px;
+    
+    border-radius: 12px;
+    
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+.service-item h2 {
+    font-size: 18px;
+    color: black;
+}
+
+
+
+
+/* Service Listings Container (Horizontal Layout) */
+.service-listings {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping if the screen is too small */
+    justify-content: center; /* Center the items */
+    gap: 20px; /* Add space between the boxes */
+    padding: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    
+}
+
+/* Individual Service Boxes */
+.service-item {
+    flex: 1 1 220px; /* Set the width to 220px and allow the box to shrink/grow */
+    margin: 10px;
+    
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(6, 7, 6, 7);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+/* Hover Effects for Service Boxes */
+.service-item:hover {
+    transform: translateY(20px); /* Lift effect on hover */
+    box-shadow: 0 12px 24px rgba(6, 7, 06, 7); /* Enhanced shadow on hover */
+}
+
+/* Make sure the service items are aligned horizontally */
+.service-listings {
+    display: flex;
+    flex-wrap: wrap; /* Wrap onto a new line if necessary */
+    justify-content: space-between; /* Distribute space between items */
+    
+}
+/* Services Section (New Flexbox Layout) */
+.service-listings .container {
+    display: flex;
+    justify-content: space-around; /* Space between service items */
+    flex-wrap: wrap; /* Allow items to wrap if the container is too small */
+    gap: 10px; /* Add spacing between service boxes */
+}
+
+/* Remove underline from service links */
+.service-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherit color from parent */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+
+/* Hover effect for service links */
+.service-link:hover {
+    color: cyan; /* Change text color on hover */
+    text-decoration: underline; /* Optional: Add underline on hover */
+    transform: scale(1.05); /* Slightly scale up the link on hover */
+}
+
+
+
+/* About Us Section */
+.about-us {
+    
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0);
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.about-us h2 {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 18px;
+    color: black;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Contact Us Section */
+.contact-us {
+    
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0);
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.contact-us h2 {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.contact-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-us li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+.contact-us a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer Section */
+footer {
+    padding: 0px 0px;
+   
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 25px;
+    margin-bottom: 32px;
+}
+
+footer p.thank-you {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+
+
+footer a:hover {
+    text-decoration: underline;
+}

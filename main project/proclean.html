@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Provider Registration</title>
+    <link rel="stylesheet" href="proclean.css">
+</head>
+<body>
+    <div class="container">
+        <div class="registration-form">
+            <h2>Service Provider Registration</h2>
+            <form id="registrationForm" onsubmit="event.preventDefault(); showConfirmation();">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <label for="service_type">Service Type:</label>
+                <input type="text" id="service_type" name="service_type" required>
+
+                <label for="experience year">experience year:</label>
+                <input type="number" id="experience year" name="experience year" required>
+                
+                
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+                
+                <label for="password">Password:</label>
+                <input type="alphanumeric" id="password" name="password" required>
+                
+                <button type="submit">Register</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Are you sure you want to register?</p>
+            <button id="confirmButton" onclick="registerServiceProvider()">Confirm</button>
+            <button id="cancelButton" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for form submission and modal -->
+    <script>
+
+        
+        function showConfirmation() {
+            var form = document.getElementById('registrationForm');
+            
+            
+            if (form.checkValidity()) {
+                document.getElementById('confirmationModal').style.display = 'block';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('confirmationModal').style.display = 'none';
+        }
+
+        function registerServiceProvider() {
+           
+            closeModal();
+
+           
+            alert('You are successfully registered!');
+
+            
+            window.location.href = "cleaning.html"; 
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('registrationForm');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); 
+
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        fetch('http://localhost:3000/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.text())
+        .then(result => {
+            alert(result);
+            form.reset(); // Reset form fields
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
+

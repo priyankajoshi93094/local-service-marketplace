@@ -1,0 +1,101 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url(https://media.istockphoto.com/id/1053277490/photo/sustainable-community-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=QX7IK27SApurY9EzHu-TO0tBvqNiXTht5D98P7yJ4T0=);
+    background-size: cover;
+    background-repeat: no repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.login-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+
+.form-group input:focus {
+    border-color: #4CAF50; 
+}
+
+
+.login-btn {
+    width: 100%;
+    background-color: hotpink; 
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: aqua; 
+}
+
+
+.container {
+    margin-top: -50px;
+}
+
+
+.container p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+.container p a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container p a:hover {
+    text-decoration: underline;
+}
